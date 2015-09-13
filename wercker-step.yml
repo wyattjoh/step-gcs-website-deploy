@@ -1,0 +1,7 @@
+name: gcs-website-deploy
+version: 0.0.0
+description: Deploy website to Google Cloud Storage
+properties:
+  token:
+    type: string
+    required: true
