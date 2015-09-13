@@ -2,6 +2,16 @@
 
 A step that deploys website to Google Cloud Storage.
 
+It requires a `.boto` config file on the root of the repository,
+and requires `gs_oauth2_refresh_token` and `default_project_id` lines in `.boto` like below:
+
+    [Credentials]
+    gs_oauth2_refresh_token =
+    [GSUtil]
+    default_project_id =
+
+see: https://cloud.google.com/storage/docs/gsutil/commands/config
+
 It applies gzip content-encoding to file uploads with below extensions.
 
   * css
