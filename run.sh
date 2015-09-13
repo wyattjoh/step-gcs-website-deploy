@@ -38,8 +38,5 @@ debug 'Starting deployment'
 
 gsutil -m rsync -r -d $WERCKER_GCS_WEBSITE_DEPLOY_DIR gs://$WERCKER_GCS_WEBSITE_DEPLOY_BUCKET
 gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg $WERCKER_GCS_WEBSITE_DEPLOY_DIR/* gs://$WERCKER_GCS_WEBSITE_DEPLOY_BUCKET
-for ext in css js woff woff2 ttf eot; do
-gsutil -m setmeta -h "Cache-Control:public, max-age=604800" "gs://$WERCKER_GCS_WEBSITE_DEPLOY_BUCKET/**.$ext"
-done
 
 success 'Finished'
