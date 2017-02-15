@@ -17,10 +17,10 @@ debug 'setting gsutil'
 
 cat > .boto <<EOF
 [Credentials]
-gs_oauth2_refresh_token = ${WERCKER_GCS_WEBSITE_DEPLOY_TOKEN}
+gs_oauth2_refresh_token = $WERCKER_GCS_WEBSITE_DEPLOY_TOKEN
 
 [GSUtil]
-default_project_id = ${$WERCKER_GCS_WEBSITE_DEPLOY_PROJECT}
+default_project_id = $WERCKER_GCS_WEBSITE_DEPLOY_PROJECT
 EOF
 
 export BOTO_PATH=$PWD/.boto
