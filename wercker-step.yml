@@ -1,5 +1,5 @@
 name: gcs-website-deploy
-version: 1.0.4
+version: 1.0.0
 description: Deploy website to Google Cloud Storage
 properties:
   bucket:
@@ -14,11 +14,3 @@ properties:
   dir:
     type: string
     default: public
-  initialize:
-    type: string
-  class:
-    type: string
-    default: STANDARD
-  location:
-    type: string
-    default: US
